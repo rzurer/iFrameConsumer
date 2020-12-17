@@ -1,0 +1,22 @@
+{
+  "name": "applicationname",
+  "description": "description",
+  "version": "0.0.1-00",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "browserify-middleware": "*",
+    "express": "*",
+    "pug": "^3.0.0",
+    "eslint": "*"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "*"
+  },
+  "domains": [],
+  "repository": {
+    "url": "https://github.com/rzurer/repository.git"
+  }
+}
