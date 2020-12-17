@@ -7,3 +7,14 @@ body {
   float: left;
   margin: 0 !important;
 }
+
+.iFrameContainer{
+  width: 100%;
+  float: left;
+  font-size: 24px;
+}
+
+.iFrameContainer div {
+  margin-top: 15px;
+  text-align: center;
+}
