@@ -4,13 +4,11 @@
     app = express(),
     path = require('path'),
     config = require('./lib/config').initialize(),
-    browserify = require('browserify-middleware'),
     homeController = require('./routes/homeController').initialize(express);
   let server;
   app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'pug');
   app.use(express.static(path.join(__dirname, 'public')));
-  app.use('/js', browserify('./client'));
   app.use('/', homeController);
   app.use('*', function (req, res, next) {
     var err = new Error('Not Found');
