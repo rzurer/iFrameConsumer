@@ -1,5 +1,4 @@
 extends ./layout.pug
 block content
-  .iFrameContainer 
-    div What you see below is content from an external site embedded in an iFrame
-    iframe(src="https://wwys-svelte.herokuapp.com/", scrolling="no" style="overflow: hidden; width: 1350px; height: 650px; border:none")
+  iframe#desktop(src="https://wwys-svelte.herokuapp.com/", scrolling="no" style="overflow: hidden; width: 1350px; height: 670px; border:none")
+  iframe#mobile(src="https://writewhatyousee.art", scrolling="no" style="overflow: hidden; width: 380px; height: 780px; border:none")
