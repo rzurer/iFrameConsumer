@@ -5,8 +5,7 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "express": "*",
-    "pug": "^3.0.0",
-    "eslint": "*"
+    "pug": "*"
   },
   "scripts": {
     "start": "node app.js"

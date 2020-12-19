@@ -3,7 +3,6 @@
   const express = require('express'),
     app = express(),
     path = require('path'),
-    config = require('./lib/config').initialize(),
     homeController = require('./routes/homeController').initialize(express);
   let server;
   app.set('views', path.join(__dirname, 'views'));
@@ -15,23 +14,7 @@
     err.status = 404;
     next(err);
   });
-  if (app.get('env') === 'development') {
-    app.use(function (err, req, res, next) {
-      res.status(err.status || 500);
-      res.render('error', {
-        message: err.message,
-        error: err
-      });
-    });
-  };
-  app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: {}
-    });
-  });
-  app.set('port', process.env.PORT || config.developmentPort);
+  app.set('port', process.env.PORT || 6500);
   server = app.listen(app.get('port'), function () {
     console.log('Express server listening on port ' + server.address().port);
   });
