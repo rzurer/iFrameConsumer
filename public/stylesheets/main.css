@@ -1,6 +1,8 @@
 @charset 'UTF-8';
-
-@media only screen and (max-width: 800px) {
+  #mobile {
+    display: none;
+  }
+@media only screen and (min-width: 360px) and (max-width: 767px) {
   #desktop {
     display: none;
   }
@@ -9,7 +11,7 @@
   }
 }
 
-@media (min-width: 800px) and (max-width: 1920px){
+@media (min-width: 1281px) {
   #desktop {
     display: block;
   }
